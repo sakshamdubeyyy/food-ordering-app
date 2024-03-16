@@ -1,0 +1,42 @@
+.container {
+    height: 50px;
+    border: 1px solid rgb(235, 227, 227);
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(235, 227, 227);
+}
+
+.logo > img {
+    height: 50px;
+    mix-blend-mode: multiply !important;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+.navBar > ul{
+    display: flex;
+    gap: 30px;
+}
+
+.navBar > ul > li{
+    list-style: none;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.navBar > ul > li:hover{
+    color: rgb(255, 102, 0);
+}
+
+.navBar{
+    margin-right: 45px;
+}
+
+.loginButton{
+    padding: 2px;
+    border: none;
+    background-color: rgb(255, 102, 0);
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
