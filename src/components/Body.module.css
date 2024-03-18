@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    margin-bottom: 20px;
 }
 
 .filtersAndCards{
