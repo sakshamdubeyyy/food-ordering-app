@@ -1,3 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.filtersAndCards{
+    width: 70vw;
+}
+
 .resCards{
     display: flex;
     flex-wrap: wrap;
@@ -36,4 +47,9 @@
     outline: none;
     border-radius: 5px;
     border: 1px solid rgb(255, 102, 0);
+}
+
+.link{
+    text-decoration: none;
+    color: black;
 }

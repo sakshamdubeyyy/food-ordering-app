@@ -4,9 +4,10 @@
     display: flex;
     justify-content: space-between;
     background-color: rgb(235, 227, 227);
+    width: 100vw;
 }
 
-.logo > img {
+.logoImage{
     height: 50px;
     mix-blend-mode: multiply !important;
     margin-left: 25px;
@@ -21,15 +22,22 @@
 .navBar > ul > li{
     list-style: none;
     cursor: pointer;
-    transition: all .2s ease-in-out;
 }
 
-.navBar > ul > li:hover{
-    color: rgb(255, 102, 0);
-}
+
 
 .navBar{
     margin-right: 45px;
+}
+
+.link{
+    text-decoration: none;
+    color: black;
+    transition: all .2s ease-in-out;
+}
+
+.link:hover{
+    color: rgb(255, 102, 0);
 }
 
 .loginButton{

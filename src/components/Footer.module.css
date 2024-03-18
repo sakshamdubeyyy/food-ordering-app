@@ -1,0 +1,45 @@
+.container{
+    height: 70vh;
+    width: 100vw;
+    background-color: rgb(76, 75, 75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer{
+    width: 70vw;
+    height: 40vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoImage{
+    mix-blend-mode: color;
+    height: 20vh;
+    position: absolute;
+    left: 200px;
+}
+
+.link{
+    text-decoration: none;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+
+.link:hover{
+    color: antiquewhite;
+}
+
+.companySection{
+    width: 25vw;
+
+}
+
+.contactSection{
+    width: 25vw;
+}
+
+.name{
+ display: none;
+}

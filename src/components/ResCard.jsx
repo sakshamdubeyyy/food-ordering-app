@@ -9,7 +9,7 @@ export default function ResCard({resData}) {
         <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${data.cloudinaryImageId}`} alt='resimage'/>
         <h4>{data.name}</h4>
         <h6>{data.cuisines.join(", ")}</h6>
-        <h6>{data.avgRating} Stars</h6>
+        <h6>⭐ {data.avgRating}</h6>
         <h6>{data.costForTwo}</h6>
         <h6>{data.sla.slaString} Away</h6>
       </div>

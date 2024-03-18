@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ResCard from './ResCard'
 import styles from "./Body.module.css"
 import Shimmer from './Shimmer';
+import { Link } from 'react-router-dom';
 
 export default function Body() {
     const [restaurantData, setRestaurantData] = useState([]);
@@ -46,14 +47,18 @@ export default function Body() {
         <div className={styles.heading}>
           <h2>Restaraunts Near You</h2>
         </div>
-        <div className={styles.filters}>
-            <button className={styles.ratingFilterBtn} onClick={handleRatingFilter}>Highest Rated</button>
-            <button className={styles.ratingFilterBtn} onClick={handleNearestFilter}>Nearest Restaurants</button>
-        </div>
-        <div className={styles.resCards}>
-            {filteredList.map((restaurant) => (
-            <ResCard key={restaurant.info.id} resData={restaurant}/>
-            ))}
+        <div className={styles.filtersAndCards}>
+          <div className={styles.filters}>
+              <button className={styles.ratingFilterBtn} onClick={handleRatingFilter}>Highest Rated</button>
+              <button className={styles.ratingFilterBtn} onClick={handleNearestFilter}>Nearest Restaurants</button>
+          </div>
+          <div className={styles.resCards}>
+              {filteredList.map((restaurant) => (
+                <Link key={restaurant.info.id} className={styles.link} to={`/Restaurant/${restaurant.info.id}`}>
+                  <ResCard key={restaurant.info.id} resData={restaurant}/>
+                </Link>
+              ))}
+          </div>
         </div>
     </div>  
   )
