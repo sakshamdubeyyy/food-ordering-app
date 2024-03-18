@@ -14,7 +14,7 @@ export default function ResMenu() {
     }, [])
 
     const fetchMenu = async () => {
-        let data = await fetch(`https://proxy.cors.sh/fetch/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`, {
+        let data = await fetch(`https://proxy.cors.sh/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`, {
             headers: {
             'x-cors-api-key': 'temp_8b3f5112892219c4a0e5f81e204587f4'
             }
