@@ -14,7 +14,11 @@ export default function Body() {
     }, [])
 
     const getData = async() => {
-      const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+      const data = await fetch("https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING", {
+        headers: {
+        'x-cors-api-key': 'temp_8b3f5112892219c4a0e5f81e204587f4'
+        }
+      });
 
       const json = await data.json();
       setRestaurantData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
