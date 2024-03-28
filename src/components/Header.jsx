@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import styles from "./Header.module.css"
 import { URL_LOGO } from '../utils/constants'
 import { Route, Routes, Link } from 'react-router-dom'
+import useOnlineStatus from '../utils/useOnlineStatus'
 
 export default function Header() {
     const [isLoggedin, setIsLoggedIn] = useState(true)
+    const onlineStatus = useOnlineStatus();
   return (
     <div className={styles.container}>
         <div className={styles.logo}>
@@ -34,6 +36,9 @@ export default function Header() {
                         Cart 
                     </li>
                     <button onClick={() => setIsLoggedIn(prev => !prev)} className={styles.loginButton}>{isLoggedin ? "Logout" : "Login"}</button>
+                    <li>
+                        {onlineStatus ? '🟢 Online' : '🔴 Offline'}
+                    </li>
                 </ul>
             </nav>
         </div>

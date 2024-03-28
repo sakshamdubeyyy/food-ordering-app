@@ -18,7 +18,7 @@ class About extends React.Component{
   render(){
     console.log("Parent render called")
     return (
-      <div style={{display:"flex", alignItems:"center", flexDirection:"column"}}>
+      <div style={{display:"flex", alignItems:"center", flexDirection:"column", marginTop:"70px"}}>
         <div style={{width:"70vw", textAlign:"center"}}>
         <h1>About Us</h1>
         <p>

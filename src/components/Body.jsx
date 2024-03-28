@@ -26,6 +26,8 @@ export default function Body() {
     }
    
 
+    
+
     const handleRatingFilter = () => {
       setFilteredList(restaurantData.filter((res) => res.info.avgRating > 4));
     }
